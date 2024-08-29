@@ -89,8 +89,8 @@ def normalize_dataset_format(data_root, save_root):
 
 if __name__ == '__main__':
 
-    data_root = 'E:\\Dataset\\MELD'
-    save_root = 'E:\\Dataset\\meld-process'
+    data_root = config.DATA_ROOT['MELD'] # 'MELD.Raw' ?
+    save_root = config.DATA_DIR['MELD'] # './dataset/meld-process'
     normalize_dataset_format(data_root, save_root)
 
     # data_root = 'E:\\Dataset\\meld-process'

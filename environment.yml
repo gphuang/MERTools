@@ -1,4 +1,4 @@
-name: mertools
+name: merbench-env
 channels:
   - pytorch
   - defaults

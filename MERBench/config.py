@@ -1,14 +1,22 @@
 import os
 
 ############ For LINUX ##############
+DATA_ROOT = {
+    'IEMOCAP' : '/scratch/elec/puhe/c/IEMOCAP_full_release/',
+    'MELD' : '/scratch/elec/puhe/c/MELD.Raw/',
+}
 DATA_DIR = {
+    'MELD' : '/scratch/work/huangg5/mer_bench/MERBench/dataset/meld-process',
+    'IEMOCAP' : '/scratch/work/huangg5/mer_bench/MERBench/dataset/iemocap-process',
+    'IEMOCAPFour' : '/scratch/work/huangg5/mer_bench/MERBench/dataset/iemocap-process',
+    'IEMOCAPSix' : '/scratch/work/huangg5/mer_bench/MERBench/dataset/iemocap-process',
+    #TBD
 	'MER2023': '/share/home/lianzheng/chinese-mer-2023/dataset/mer2023-dataset-process',
-    'IEMOCAPFour':  '/share/home/lianzheng/chinese-mer-2023/dataset/iemocap-process',
+    'IEMOCAPFour': '/share/home/lianzheng/chinese-mer-2023/dataset/iemocap-process',
     'IEMOCAPSix':  '/share/home/lianzheng/chinese-mer-2023/dataset/iemocap-process',
     'CMUMOSI':  '/share/home/lianzheng/chinese-mer-2023/dataset/cmumosi-process',
     'CMUMOSEI': '/share/home/lianzheng/chinese-mer-2023/dataset/cmumosei-process',
     'SIMS': '/share/home/lianzheng/chinese-mer-2023/dataset/sims-process',
-    'MELD': '/share/home/lianzheng/chinese-mer-2023/dataset/meld-process',
     'SIMSv2': '/share/home/lianzheng/chinese-mer-2023/dataset/simsv2-process',
 }
 PATH_TO_RAW_AUDIO = {
@@ -75,7 +83,7 @@ PATH_TO_LABEL = {
 # pre-trained models, including supervised and unsupervised
 PATH_TO_PRETRAINED_MODELS = './tools'
 PATH_TO_OPENSMILE = './tools/opensmile-2.3.0/'
-PATH_TO_FFMPEG = './tools/ffmpeg-4.4.1-i686-static/ffmpeg'
+PATH_TO_FFMPEG = './tools/ffmpeg-6.0.1-i686-static/ffmpeg'
 
 # dir
 SAVED_ROOT = os.path.join('./saved')

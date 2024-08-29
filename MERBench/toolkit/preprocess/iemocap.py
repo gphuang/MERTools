@@ -4,6 +4,10 @@ import glob
 import tqdm
 import pickle
 import multiprocessing
+
+import sys
+sys.path.append('/scratch/work/huangg5/mer_bench/MERBench')
+
 from toolkit.utils.chatgpt import *
 from toolkit.utils.functions import *
 from toolkit.utils.read_files import *
@@ -195,15 +199,7 @@ def normalize_dataset_format(data_root, save_root):
 
 if __name__ == '__main__':
     ## linux
-    data_root = '/share/home/lianzheng/emotion-data/IEMOCAP_full_release'
-    save_root = '/share/home/lianzheng/chinese-mer-2023/dataset/iemocap-process'
+    data_root = config.DATA_ROOT['IEMOCAP'] # 'IEMOCAP_full_release'
+    save_root = config.DATA_DIR['IEMOCAP'] # './dataset/iemocap-process'
     normalize_dataset_format(data_root, save_root)
-
-    ## window => 直接用ghelper客户端 => clash and ghelper 的端口号是不一样的 [linux无法翻墙]
-    # translate transcript
-    # data_root = 'H:\\desktop\\Multimedia-Transformer\\chinese-mer-2023\\dataset\\iemocap-process'
-    # trans_path = os.path.join(data_root, 'transcription.csv')
-    # save_path  = os.path.join(data_root, 'transcription-engchi.csv')
-    # polish_path = os.path.join(data_root, 'transcription-engchi-polish.csv')
-    # # func_translate_transcript(trans_path, save_path)  # 还是需要人为检查一下，尤其是带“翻译”的单词
-    # func_translate_transcript_polish(trans_path, save_path, polish_path) # 再次检测一下遗漏的部分
+    
